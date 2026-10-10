@@ -9,5 +9,6 @@ class Calculator:
         return a * b
         
     def divide(self, a, b):
-        # BUG: We are doing raw division without checking for zero
+        if b == 0:
+            raise ValueError('Cannot divide by zero')
         return a / b
