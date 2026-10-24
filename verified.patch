@@ -1,0 +1,12 @@
+diff --git a/calculator.py b/calculator.py
+index 75bb244..925bc97 100644
+--- a/calculator.py
++++ b/calculator.py
+@@ -9,5 +9,6 @@ class Calculator:
+         return a * b
+         
+     def divide(self, a, b):
+-        # BUG: We are doing raw division without checking for zero
++        if b == 0:
++            raise ValueError('Cannot divide by zero')
+         return a / b
